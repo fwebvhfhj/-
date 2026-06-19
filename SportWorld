@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Магазин спортивных товаров</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #27ae60;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  .social-icons a {
+    font-size: 20px;
+    color: #27ae60;
+    text-decoration: none;
+  }
+  .social-icons a:hover {
+    color: #1e8449;
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e0f7fa;
+  }
+  .search-container input {
+    padding: 12px 20px;
+    border: 2px solid #27ae60;
+    border-radius: 25px;
+    outline: none;
+    width: 250px;
+    font-size: 16px;
+    transition: all 0.3s;
+  }
+  .search-container input:focus {
+    box-shadow: 0 0 8px rgba(39, 174, 96, 0.5);
+  }
+  .search-button {
+    margin-left: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #27ae60;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .search-button:hover {
+    background-color: #1e8449;
+  }
+
+  .main-banner {
+    width: 100%;
+    height: 500px;
+    background-image: url('image/sport-banner.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 32px;
+    margin: 40px 0 20px;
+    color: #2ecc71;
+  }
+
+  .products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px 40px;
+  }
+
+  .product-card {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 280px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  .product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .product-info {
+    padding: 15px;
+  }
+  .product-info h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #16a085;
+  }
+  .product-info p {
+    font-size: 14px;
+    color: #555;
+  }
+
+  /* Отзывы и контакты */
+  .section {
+    padding: 40px 20px;
+  }
+  .section h2 {
+    text-align: center;
+    color: #27ae60;
+    margin-bottom: 30px;
+  }
+
+  .reviews, .contacts {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .reviews-list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .review, .contact-form {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px #cdd7df25;
+    width: 220px;
+  }
+
+  .review b {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* Контактная форма */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  form button {
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  form button:hover {
+    background: #1e8449;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top-header">
+    <h1>SportShop</h1>
+    <div class="social-icons">
+      <a href="#" title="Facebook">🌐</a>
+      <a href="#" title="Instagram">📸</a>
+      <a href="#" title="Twitter">🐦</a>
+    </div>
+  </div>
+  <div class="search-container">
+    <input type="text" placeholder="Ищете спортивное оборудование?" />
+    <button class="search-button">Поиск</button>
+  </div>
+</header>
+
+<div class="main-banner"></div>
+
+<h2 class="section-title">Лучшие товары</h2>
+<section class="products">
+  <a href="product1.html" style="text-decoration:none; color:inherit;">
+    <div class="product-card">
+      <img src="image/basketball.jpg" alt="Баскетбольный мяч" />
+      <div class="product-info">
+        <h3>Баскетбольный мяч</h3>
+        <p>Премиальный мяч для игры в зале и на улице.</p>
+      </div>
+    </div>
+  </a>
+  <a href="product2.html" style="text-decoration:none; color:inherit;">
+    <div class="product-card">
+      <img src="image/tennis-racket.jpg" alt="Теннисная ракета" />
+      <div class="product-info">
+        <h3>Теннисная ракетка</h3>
+        <p>Легкая и прочная ракетка для профессиональных игр.</p>
+      </div>
+    </div>
+  </a>
+  <a href="product3.html" style="text-decoration:none; color:inherit;">
+    <div class="product-card">
+      <img src="image/fitness-bike.jpg" alt="Фитнес-велосипед" />
+      <div class="product-info">
+        <h3>Фитнес-велосипед</h3>
+        <p>Идеально подходит для тренажерного зала и дома.</p>
+      </div>
+    </div>
+  </a>
+</section>
+
+<div class="section">
+  <h2>Отзывы покупателей</h2>
+  <div class="reviews-list">
+    <div class="review">
+      <b>Алексей:</b>
+      Отличный магазин! Купил кроссовки и очень доволен.
+    </div>
+    <div class="review">
+      <b>Елена:</b>
+      Большой выбор товаров и приятные цены. Рекомендую!
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Контакты</h2>
+  <div class="contacts">
+    <div style="margin-bottom:16px;">
+      <b>Email:</b> shop@sport.com <br>
+      <b>Телефон:</b> +7 (900) 123-45-67
+    </div>
+    <form>
+      <input type="text" placeholder="Ваше имя" required>
+      <input type="email" placeholder="Ваш email" required>
+      <textarea placeholder="Ваше сообщение" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
